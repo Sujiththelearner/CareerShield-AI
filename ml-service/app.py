@@ -51,7 +51,7 @@ def init_ml_model():
             print(" Loaded pre-trained model.pkl and vectorizer.pkl successfully.")
             return
         except Exception as e:
-            print(f"⚠️ Error loading pickles ({e}), re-training on dataset...")
+            print(f"[WARN] Error loading pickles ({e}), re-training on dataset...")
 
     # 2. Try to train on Fake_internships.csv
     if os.path.exists(CSV_PATH):
@@ -72,10 +72,10 @@ def init_ml_model():
             with open(VECTORIZER_PATH, "wb") as vf:
                 pickle.dump(vectorizer, vf)
 
-            print(" Trained and saved model from Fake_internships.csv successfully.")
+            print("[INFO] Trained and saved model from Fake_internships.csv successfully.")
             return
         except Exception as e:
-            print(f"⚠️ Error training on CSV ({e}), falling back to synthetic corpus...")
+            print(f"[WARN] Error training on CSV ({e}), falling back to synthetic corpus...")
 
     # 3. Fallback synthetic corpus
     texts = [
@@ -136,7 +136,14 @@ def predict_fraud(payload: JobTextRequest):
         "model_type": "NLP TF-IDF Logistic Scam Classifier (Fake_internships Dataset)"
     }
 
+import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 if __name__ == "__main__":
     import uvicorn
-    print("🚀 Starting CareerShield AI ML API on http://localhost:8000...")
+    print("[INFO] Starting CareerShield AI ML API on http://localhost:8000...")
     uvicorn.run(app, host="0.0.0.0", port=8000)
