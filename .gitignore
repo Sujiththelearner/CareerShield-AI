@@ -1,0 +1,57 @@
+# ==============================================================================
+# CareerShield AI - Git Ignore
+# ==============================================================================
+
+# Compiled Java class files & build directories
+target/
+*.class
+
+# Server logs
+*.log
+logs/
+server.log
+
+# Packaging & binary archives
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Python caches and virtual environments
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Editor configurations
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+.DS_Store
+Thumbs.db
+
+# Sensitive environment and credentials files
+.env
+.env.*
+*.local
+
+# Embedded database persistent files
+data/
+*.mv.db
+*.trace.db
+
+# User uploaded files (preserve folder with .gitkeep)
+uploads/evidence/*
+!uploads/evidence/.gitkeep
+
+# Windows background runner scripts
+start-background.vbs
+start-permanent.bat
+stop-server.bat

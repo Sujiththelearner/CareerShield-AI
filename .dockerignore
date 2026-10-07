@@ -1,0 +1,17 @@
+target/
+*.jar
+*.log
+logs/
+.git/
+.vscode/
+.idea/
+data/
+uploads/evidence/*
+!uploads/evidence/.gitkeep
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.bat
+*.ps1
+*.vbs

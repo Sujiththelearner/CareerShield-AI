@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard – CareerShield AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-mesh">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg cs-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-shield-fill-check shield-icon"></i>
+                <span>CareerShield<span class="text-info">.AI</span></span>
+            </a>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-container">
+                    <!-- Populated dynamically by auth.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="cs-card mb-4 p-4 border-warning border-opacity-25 d-flex flex-wrap justify-content-between align-items-center">
+            <div>
+                <span class="badge bg-warning text-dark mb-2"><i class="bi bi-shield-lock-fill me-1"></i> Placement Cell & Cyber Command</span>
+                <h3 class="fw-bold text-white mb-0">CareerShield Administrative Center</h3>
+                <p class="text-secondary small mb-0">Platform-wide fraud surveillance and incident investigation.</p>
+            </div>
+            <span class="badge bg-dark border border-secondary text-info px-3 py-2">Role: System Administrator</span>
+        </div>
+
+        <!-- Global Metrics Cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-sm-6 col-lg-3">
+                <div class="cs-card stat-card h-100">
+                    <div class="stat-icon text-info"><i class="bi bi-globe"></i></div>
+                    <div class="stat-label">Platform Scans</div>
+                    <div class="stat-value text-white" id="adm-total-scans">0</div>
+                    <div class="text-secondary small">Total submissions</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="cs-card stat-card h-100">
+                    <div class="stat-icon text-success"><i class="bi bi-patch-check"></i></div>
+                    <div class="stat-label">Verified Genuine</div>
+                    <div class="stat-value text-success" id="adm-safe-scans">0</div>
+                    <div class="text-secondary small">Passed all security checks</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="cs-card stat-card h-100">
+                    <div class="stat-icon text-danger"><i class="bi bi-shield-slash"></i></div>
+                    <div class="stat-label">Scams Blocked</div>
+                    <div class="stat-value text-danger" id="adm-high-scans">0</div>
+                    <div class="text-secondary small">Fraudulent job postings</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="cs-card stat-card h-100">
+                    <div class="stat-icon text-warning"><i class="bi bi-safe2"></i></div>
+                    <div class="stat-label">Vault Incidents</div>
+                    <div class="stat-value text-warning" id="adm-evidence-count">0</div>
+                    <div class="text-secondary small">Logged student reports</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student-Reported Frauds Review Table -->
+        <div class="cs-card mb-4 p-4">
+            <h5 class="text-white fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i> Student-Reported Incidents (Placement Cell Alerts)
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>Incident Title</th>
+                            <th>Employer / Poster</th>
+                            <th>Reported Date</th>
+                            <th>Forensic Notes</th>
+                            <th>Attachment</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adm-evidence-tbody">
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">Loading reported incident logs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Global Scans Log -->
+        <div class="cs-card p-4">
+            <h5 class="text-white fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                <i class="bi bi-activity text-info me-2"></i> Live Platform Scan Activity Stream
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Safety Score</th>
+                            <th>Risk Verdict</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adm-scans-tbody">
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">Loading system activity...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

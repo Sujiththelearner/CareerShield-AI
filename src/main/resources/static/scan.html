@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job & Internship Scanner – CareerShield AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-mesh">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg cs-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-shield-fill-check shield-icon"></i>
+                <span>CareerShield<span class="text-info">.AI</span></span>
+            </a>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-container">
+                    <!-- Injected dynamically by auth.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="fw-bold text-white mb-1"><i class="bi bi-shield-check text-info me-2"></i> Job & Internship Scanner</h2>
+                        <p class="text-secondary small mb-0">Evaluate posting authenticity, company domain validity, and fraud signals.</p>
+                    </div>
+                    <!-- Quick Load Demo Buttons -->
+                    <div class="dropdown mt-2 mt-md-0">
+                        <button class="btn btn-sm btn-shield-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-magic me-1 text-warning"></i> Load Demo Test Case
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+                            <li><h6 class="dropdown-header text-muted">Test Real Scenarios</h6></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="loadSampleScam1()"><i class="bi bi-x-circle text-danger me-2"></i> Fake Google Internship (Deposit Scam)</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="loadSampleScam2()"><i class="bi bi-exclamation-triangle text-warning me-2"></i> WhatsApp Task Scam (Daily Payout)</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="loadSampleLegit()"><i class="bi bi-check-circle text-success me-2"></i> Genuine Infosys Developer Listing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cs-card">
+                    <form id="scan-form" enctype="multipart/form-data">
+                        
+                        <!-- Step 1: Basic Information -->
+                        <div class="mb-4">
+                            <h5 class="text-info fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                                <span class="badge bg-info text-dark rounded-circle me-2">1</span> Target Opportunity Details
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Job or Internship Title <span class="text-danger">*</span></label>
+                                    <input type="text" id="jobTitle" class="form-control" placeholder="e.g. Java Software Intern" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Claimed Company Name <span class="text-danger">*</span></label>
+                                    <input type="text" id="companyName" class="form-control" placeholder="e.g. Google or Tech Startup" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Posting URL or Portal Link (Optional)</label>
+                                    <input type="url" id="jobUrl" class="form-control" placeholder="https://linkedin.com/jobs/...">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Location / Mode</label>
+                                    <input type="text" id="location" class="form-control" placeholder="e.g. Remote, Bangalore, New York">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Contact & Offer Info -->
+                        <div class="mb-4">
+                            <h5 class="text-info fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                                <span class="badge bg-info text-dark rounded-circle me-2">2</span> Contact & Compensation Signals
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Recruiter Email Address</label>
+                                    <input type="email" id="recruiterEmail" class="form-control" placeholder="e.g. hr.company@gmail.com or hr@company.com">
+                                    <div class="form-text text-muted small">Our Java engine validates whether the email matches official corporate domains.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Offered Salary or Stipend</label>
+                                    <input type="text" id="salaryInfo" class="form-control" placeholder="e.g. ₹25,000/month or $5,000/week">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Posting Text & Attachment -->
+                        <div class="mb-4">
+                            <h5 class="text-info fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                                <span class="badge bg-info text-dark rounded-circle me-2">3</span> Full Job Description & Forensic File
+                            </h5>
+                            <div class="mb-3">
+                                <label class="form-label">Job Description / Message Text <span class="text-danger">*</span></label>
+                                <textarea id="jobDescription" class="form-control" rows="6" placeholder="Paste the complete job requirements, email body, Telegram message, or onboarding instructions here..." required></textarea>
+                            </div>
+                            <div>
+                                <label class="form-label">Attach Screenshot or PDF Offer Letter (Optional)</label>
+                                <input type="file" id="jobFile" class="form-control" accept="image/*,application/pdf">
+                                <div class="form-text text-muted small">Supports JPG, PNG, and PDF offer letters. Files are archived securely in your Evidence Vault.</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-3 pt-3 border-top border-secondary border-opacity-25">
+                            <button type="reset" class="btn btn-shield-outline px-4">Reset Form</button>
+                            <button type="submit" id="btn-submit-scan" class="btn btn-shield-primary btn-lg px-5">
+                                <i class="bi bi-shield-fill-check me-2"></i> Run Safety Analysis
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scanning Radar Modal Overlay -->
+    <div class="modal fade" id="scanningModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content cs-card text-center border-info border-opacity-50 p-4">
+                <div class="radar-box">
+                    <div class="radar-sweep"></div>
+                </div>
+                <h4 class="text-white fw-bold mb-2">Analyzing Job Posting...</h4>
+                <p class="text-secondary small mb-3" id="radar-status-text">Initializing Java Multi-Factor Strategy Engine...</p>
+                <div class="progress bg-dark" style="height: 6px;">
+                    <div id="radar-progress-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 25%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/scanner.js"></script>
+</body>
+</html>

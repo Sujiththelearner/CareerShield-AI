@@ -1,0 +1,103 @@
+sr.no,title,company,description,fraudulent
+1,Python Intern,Microsoft,Looking for a Python intern with basic knowledge of ML.,0
+2,Frontend Developer,CodeCraft Solutions,Hiring frontend developer with React experience.,0
+3,Software Engineer,Google,Software engineer required with 2 years experience.,0
+4,Marketing Intern,BrandBoost,Marketing intern needed for social media campaigns.,0
+5,Data Analyst,DataMetrics,Data analyst position requiring Excel and SQL.,0
+6,Backend Developer,WebCore,Backend developer with Node.js experience.,0
+7,Graphic Designer,PixelStudio,Graphic designer with portfolio required.,0
+8,HR Intern,PeopleFirst,HR intern for recruitment assistance.,0
+9,Cloud Engineer,SkyNet Systems,Cloud engineer with AWS knowledge.,0
+10,Cybersecurity Intern,SecureView,Cybersecurity intern with networking basics.,0
+11,Python Intern,TechNova Pvt Ltd,Looking for a Python intern with basic knowledge of ML.,0
+12,Frontend Developer,Mahendra,Hiring frontend developer with React experience.,0
+13,Software Engineer,Tcs,Software engineer required with 2 years experience.,0
+14,Marketing Intern,BrandBoost,Marketing intern needed for social media campaigns.,0
+15,Data Analyst,DataMetrics,Data analyst position requiring Excel and SQL.,0
+16,Backend Developer,WebCore,Backend developer with Node.js experience.,0
+17,Graphic Designer,PixelStudio,Graphic designer with portfolio required.,0
+18,HR Intern,PeopleFirst,HR intern for recruitment assistance.,0
+19,Cloud Engineer,SkyNet Systems,Cloud engineer with AWS knowledge.,0
+20,Cybersecurity Intern,SecureNet,Cybersecurity intern with networking basics.,0
+21,Python Intern,TechNova Pvt Ltd,Looking for a Python intern with basic knowledge of ML.,0
+22,Frontend Developer,CodeCraft Solutions,Hiring frontend developer with React experience.,0
+23,Software Engineer,InnoSoft,Software engineer required with 2 years experience.,0
+24,Marketing Intern,BrandBoost,Marketing intern needed for social media campaigns.,0
+25,Data Analyst,DataMetrics,Data analyst position requiring Excel and SQL.,0
+26,Backend Developer,WebCore,Backend developer with Node.js experience.,0
+27,Graphic Designer,PixelStudio,Graphic designer with portfolio required.,0
+28,HR Intern,PeopleFirst,HR intern for recruitment assistance.,0
+29,Cloud Engineer,SkyNet Systems,Cloud engineer with AWS knowledge.,0
+30,Cybersecurity Intern,SecureNet,Cybersecurity intern with networking basics.,0
+31,Python Intern,TechNova Pvt Ltd,Looking for a Python intern with basic knowledge of ML.,0
+32,Frontend Developer,CodeCraft Solutions,Hiring frontend developer with React experience.,0
+33,Software Engineer,InnoSoft,Software engineer required with 2 years experience.,0
+34,Marketing Intern,BrandBoost,Marketing intern needed for social media campaigns.,0
+35,Data Analyst,DataMetrics,Data analyst position requiring Excel and SQL.,0
+36,Backend Developer,WebCore,Backend developer with Node.js experience.,0
+37,Graphic Designer,PixelStudio,Graphic designer with portfolio required.,0
+38,HR Intern,PeopleFirst,HR intern for recruitment assistance.,0
+39,Cloud Engineer,SkyNet Systems,Cloud engineer with AWS knowledge.,0
+40,Cybersecurity Intern,SecureNet,Cybersecurity intern with networking basics.,0
+41,Python Intern,TechNova Pvt Ltd,Looking for a Python intern with basic knowledge of ML.,0
+42,Frontend Developer,CodeCraft Solutions,Hiring frontend developer with React experience.,0
+43,Software Engineer,InnoSoft,Software engineer required with 2 years experience.,0
+44,Marketing Intern,BrandBoost,Marketing intern needed for social media campaigns.,0
+45,Data Analyst,DataMetrics,Data analyst position requiring Excel and SQL.,0
+46,Backend Developer,WebCore,Backend developer with Node.js experience.,0
+47,Graphic Designer,PixelStudio,Graphic designer with portfolio required.,0
+48,HR Intern,PeopleFirst,HR intern for recruitment assistance.,0
+49,Cloud Engineer,SkyNet Systems,Cloud engineer with AWS knowledge.,0
+50,Cybersecurity Intern,SecureNet,Cybersecurity intern with networking basics.,0
+51,Work From Home Job,Unknown Company,Earn 50000 per week from home no experience needed.,1
+52,Guaranteed Placement,FastTrack Careers,Guaranteed job after paying training charges.,1
+53,Instant Earning Job,QuickMoney Ltd,Earn money instantly with simple online tasks.,1
+54,Part Time Income,EasyCash Corp,Work only 2 hours earn 30000 weekly.,1
+55,Direct Selection Job,NoInterview Inc,No interview direct selection send payment.,1
+56,Online Data Entry,HomeTyping Jobs,Online typing job pay deposit before joining.,1
+57,Registration Required,FutureJobs,Registration fee mandatory before interview.,1
+58,High Salary Offer,DreamCareer Hub,High salary no interview required pay fee.,1
+59,Government Job Offer,FakeGov Recruit,Government job guaranteed pay fee.,1
+60,Limited Seats Offer,FastHire,Limited seats send payment to confirm job.,1
+61,Work From Home Job,Unknown Company,Earn 50000 per week from home no experience needed.,1
+62,Guaranteed Placement,FastTrack Careers,Guaranteed job after paying training charges.,1
+63,Instant Earning Job,QuickMoney Ltd,Earn money instantly with simple online tasks.,1
+64,Part Time Income,EasyCash Corp,Work only 2 hours earn 30000 weekly.,1
+65,Direct Selection Job,NoInterview Inc,No interview direct selection send payment.,1
+66,Online Data Entry,HomeTyping Jobs,Online typing job pay deposit before joining.,1
+67,Registration Required,FutureJobs,Registration fee mandatory before interview.,1
+68,High Salary Offer,DreamCareer Hub,High salary no interview required pay fee.,1
+69,Government Job Offer,FakeGov Recruit,Government job guaranteed pay fee.,1
+70,Limited Seats Offer,FastHire,Limited seats send payment to confirm job.,1
+71,Work From Home Job,Unknown Company,Earn 50000 per week from home no experience needed.,1
+72,Guaranteed Placement,FastTrack Careers,Guaranteed job after paying training charges.,1
+73,Instant Earning Job,QuickMoney Ltd,Earn money instantly with simple online tasks.,1
+74,Part Time Income,EasyCash Corp,Work only 2 hours earn 30000 weekly.,1
+75,Direct Selection Job,NoInterview Inc,No interview direct selection send payment.,1
+76,Online Data Entry,HomeTyping Jobs,Online typing job pay deposit before joining.,1
+77,Registration Required,FutureJobs,Registration fee mandatory before interview.,1
+78,High Salary Offer,DreamCareer Hub,High salary no interview required pay fee.,1
+79,Government Job Offer,Governmentjobs,Government job guaranteed pay fee.,1
+80,Limited Seats Offer,FastHire,Limited seats send payment to confirm job.,1
+81,Work From Home Job,Unknown Company,Earn 50000 per week from home no experience needed.,1
+82,Guaranteed Placement,FastTrack Careers,Guaranteed job after paying training charges.,1
+83,Instant Earning Job,QuickMoney Ltd,Earn money instantly with simple online tasks.,1
+84,Part Time Income,Easycash ,Work only 2 hours earn 30000 weekly.,1
+85,Direct Selection Job,NoInterview Inc,No interview direct selection send payment.,1
+86,Online Data Entry,HomeTyping Jobs,Online typing job pay deposit before joining.,1
+87,Registration Required,FutureJobs,Registration fee mandatory before interview.,1
+88,High Salary Offer,DreamCareer Hub,High salary no interview required pay fee.,1
+89,Government Job Offer,FakeGov Recruit,Government job guaranteed pay fee.,1
+90,Limited Seats Offer,FastHire,Limited seats send payment to confirm job.,1
+91,Work From Home Job,Unknown Company,Earn 50000 per week from home no experience needed.,1
+92,Guaranteed Placement,FastTrack Careers,Guaranteed job after paying training charges.,1
+93,Instant Earning Job,QuickMoney Ltd,Earn money instantly with simple online tasks.,1
+94,Part Time Income,EasyCash Corp,Work only 2 hours earn 30000 weekly.,1
+95,Direct Selection Job,NoInterview Inc,No interview direct selection send payment.,1
+96,Online Data Entry,HomeTyping Jobs,Online typing job pay deposit before joining.,1
+97,Registration Required,FutureJobs,Registration fee mandatory before interview.,1
+98,High Salary Offer,DreamCareer Hub,High salary no interview required pay fee.,1
+99,Government Job Offer,unified mentor,Government job guaranteed pay fee.,1
+100,Limited Seats Offer,unified Mentor,Limited seats send payment to confirm job.,1
+101,no intervie,Unified Mentor,no intervie,1
+102,,,,

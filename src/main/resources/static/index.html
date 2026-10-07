@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerShield AI – AI-Based Fake Internship and Job Posting Detection System</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-mesh">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg cs-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-shield-fill-check shield-icon"></i>
+                <span>CareerShield<span class="text-info">.AI</span></span>
+            </a>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-container">
+                    <!-- Injected dynamically by auth.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-5 text-center position-relative">
+        <div class="container py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <span class="badge bg-primary bg-opacity-25 text-info border border-info border-opacity-25 px-3 py-2 rounded-pill mb-4">
+                        <i class="bi bi-shield-lock-fill me-1"></i> Student Cybersecurity & Placement Verification System
+                    </span>
+                    <h1 class="display-4 fw-black mb-3 text-white">
+                        Verify Before You Apply.
+                    </h1>
+                    <p class="lead text-secondary mb-4 mx-auto" style="max-width: 720px;">
+                        Analyze internships and job postings before sharing your resume, personal identity, or bank details. Powered by <strong>Java Enterprise Architecture</strong> and Explainable AI risk modeling.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+                        <a href="/scan.html" class="btn btn-shield-primary btn-lg">
+                            <i class="bi bi-search me-2"></i> Scan a Job Posting
+                        </a>
+                        <a href="/login.html" class="btn btn-shield-outline btn-lg">
+                            <i class="bi bi-box-arrow-in-right me-2"></i> Student Login
+                        </a>
+                        <a href="/register.html" class="btn btn-shield-outline btn-lg text-info border-info">
+                            <i class="bi bi-person-plus me-2"></i> Create Free Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Teaser Preview Card -->
+            <div class="row justify-content-center mt-3">
+                <div class="col-lg-10">
+                    <div class="cs-card text-start p-4 border-info border-opacity-25 shadow-lg">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger px-3 py-1">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i> Live Scam Detection Sample
+                                </span>
+                                <span class="text-muted small">Target: Fake Google Remote Intern Posting</span>
+                            </div>
+                            <span class="badge-critical"><i class="bi bi-x-octagon-fill"></i> CRITICAL FRAUD DETECTED (Score: 5/100)</span>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-7">
+                                <p class="text-secondary small mb-2"><strong class="text-white">Flagged Content:</strong> "Immediate hiring! Earn 50,000 weekly without test. Pay 2000 INR registration fee to HR on Telegram @google_hr."</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark text-warning border border-warning"><i class="bi bi-envelope-x me-1"></i> Domain Spoofing (@gmail.com)</span>
+                                    <span class="badge bg-dark text-danger border border-danger"><i class="bi bi-cash-stack me-1"></i> Upfront Deposit Demand</span>
+                                    <span class="badge bg-dark text-danger border border-danger"><i class="bi bi-telegram me-1"></i> Telegram-Only Interview</span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-center justify-content-md-end">
+                                <a href="/scan.html" class="btn btn-sm btn-shield-primary w-100 py-2">
+                                    <i class="bi bi-shield-plus me-1"></i> Run Free Analysis on Any Posting
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why CareerShield Section -->
+    <section class="py-5" style="background: rgba(13, 23, 48, 0.4);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-info text-uppercase fw-bold letter-spacing-1">Why CareerShield?</h6>
+                <h2 class="fw-bold text-white">Protecting College Students From Job Fraud</h2>
+                <p class="text-secondary">Over 70% of student fake job victims lose money through registration scams or stolen identity.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="cs-card h-100">
+                        <div class="text-info fs-1 mb-3"><i class="bi bi-fingerprint"></i></div>
+                        <h4 class="text-white fw-bold mb-2">Corporate Impersonation</h4>
+                        <p class="text-secondary">Detects fraudsters posing as Google, Microsoft, or TCS recruiters using unauthorized free email domains like `@gmail.com` or spoofed domains.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cs-card h-100">
+                        <div class="text-danger fs-1 mb-3"><i class="bi bi-wallet2"></i></div>
+                        <h4 class="text-white fw-bold mb-2">Fee & Deposit Interception</h4>
+                        <p class="text-secondary">Instantly identifies deposit requests disguised as document verification charges, laptop security fees, or training certification payments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cs-card h-100">
+                        <div class="text-warning fs-1 mb-3"><i class="bi bi-shield-slash"></i></div>
+                        <h4 class="text-white fw-bold mb-2">Shadow Communication</h4>
+                        <p class="text-secondary">Catches recruiters refusing enterprise video calls (Google Meet/Teams) and pushing applicants to untraceable Telegram or WhatsApp channels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-info text-uppercase fw-bold">System Pipeline</h6>
+                <h2 class="fw-bold text-white">How CareerShield AI Works</h2>
+                <p class="text-secondary">Multi-tier Java processing coupled with natural language machine learning.</p>
+            </div>
+
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="cs-card h-100">
+                        <div class="badge bg-primary rounded-circle p-3 fs-4 mb-3">1</div>
+                        <h5 class="text-white fw-bold">Input Job Details</h5>
+                        <p class="text-secondary small">Paste job text, recruiter email, salary, or upload screenshot/PDF offer letters.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cs-card h-100">
+                        <div class="badge bg-info rounded-circle p-3 fs-4 mb-3">2</div>
+                        <h5 class="text-white fw-bold">Java Rule Engine</h5>
+                        <p class="text-secondary small">Extensible Strategy Pattern executes heuristic rules checking email, pay, and channels.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cs-card h-100">
+                        <div class="badge bg-warning rounded-circle p-3 fs-4 mb-3">3</div>
+                        <h5 class="text-white fw-bold">AI NLP Scoring</h5>
+                        <p class="text-secondary small">Evaluates linguistic scam density and syntax anomalies with live ML inference.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="cs-card h-100">
+                        <div class="badge bg-success rounded-circle p-3 fs-4 mb-3">4</div>
+                        <h5 class="text-white fw-bold">Explainable Report</h5>
+                        <p class="text-secondary small">Generates an actionable safety audit with a 0-100 score, warning breakdowns, and advice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Features: Evidence Vault Showcase -->
+    <section class="py-5" style="background: rgba(13, 23, 48, 0.4);">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-25 px-3 py-1 rounded-pill mb-3">
+                        <i class="bi bi-safe-fill me-1"></i> Exclusive Security Feature
+                    </span>
+                    <h2 class="display-6 fw-bold text-white mb-3">The Evidence Vault</h2>
+                    <p class="text-secondary mb-4">
+                        Unlike basic classifiers that just output a label, CareerShield AI equips students with a <strong>Digital Evidence Vault</strong>. Archive suspicious chat screenshots, fraudulent offer letters, and incident notes to report directly to your College Placement Cell or Cyber Crime Cell.
+                    </p>
+                    <ul class="list-unstyled text-secondary mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Timestamped forensic records stored in MySQL</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Secure local file storage for screenshots and PDFs</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> One-click reporting to institutional administrators</li>
+                    </ul>
+                    <a href="/evidence.html" class="btn btn-shield-outline">
+                        <i class="bi bi-safe me-2"></i> Explore Evidence Vault
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cs-card p-4 border-info border-opacity-25">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="fw-bold text-white"><i class="bi bi-journal-code text-info me-2"></i> Incident Forensic Log</span>
+                            <span class="badge bg-danger">Flagged by Student</span>
+                        </div>
+                        <div class="p-3 bg-dark rounded mb-3 border border-secondary border-opacity-25">
+                            <p class="text-white small mb-1 fw-bold">Fake Internship Contract – TechNova Solutions</p>
+                            <p class="text-muted small mb-0">Demanded ₹3,500 security deposit for courier of company laptop before sending joining letter.</p>
+                        </div>
+                        <div class="d-flex justify-content-between text-muted small">
+                            <span>Status: Verified Threat</span>
+                            <span>Placement Cell Alert: Sent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5 class="text-white fw-bold mb-3">
+                        <i class="bi bi-shield-fill-check text-info me-2"></i>CareerShield AI
+                    </h5>
+                    <p class="text-secondary small mb-3">
+                        AI-Based Fake Internship and Job Posting Detection System. Built with Java Spring Boot, Spring Data JPA, Hibernate, MySQL, and Modern AI.
+                    </p>
+                    <p class="text-muted small">Tagline: <em>"Verify Before You Apply."</em></p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white fw-bold mb-3">Quick Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="/scan.html" class="text-secondary text-decoration-none">Job Scanner</a></li>
+                        <li class="mb-2"><a href="/dashboard.html" class="text-secondary text-decoration-none">Student Dashboard</a></li>
+                        <li class="mb-2"><a href="/evidence.html" class="text-secondary text-decoration-none">Evidence Vault</a></li>
+                        <li class="mb-2"><a href="/safety-tips.html" class="text-secondary text-decoration-none">Scam Awareness Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Academic Project Details</h6>
+                    <p class="text-secondary small mb-1"><strong>Core Backend:</strong> Java 17 + Spring Boot 3.2.3</p>
+                    <p class="text-secondary small mb-1"><strong>Database:</strong> MySQL 8.0 Enterprise Relational Schema</p>
+                    <p class="text-secondary small mb-0"><strong>Architecture:</strong> Strategy Pattern + Spring MVC REST</p>
+                </div>
+            </div>
+            <div class="text-center text-muted small pt-4 mt-4 border-top border-secondary border-opacity-25">
+                © 2026 CareerShield AI. Designed for Student Safety and Academic Excellence.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

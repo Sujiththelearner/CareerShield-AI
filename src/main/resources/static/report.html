@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable Safety Report – CareerShield AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        @media print {
+            body { background: #fff !important; color: #000 !important; }
+            .bg-mesh, .cs-navbar, .no-print { display: none !important; }
+            .cs-card { border: 1px solid #ccc !important; box-shadow: none !important; background: #fff !important; color: #000 !important; }
+            .text-white { color: #000 !important; }
+            .text-secondary { color: #555 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-mesh">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg cs-navbar no-print">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-shield-fill-check shield-icon"></i>
+                <span>CareerShield<span class="text-info">.AI</span></span>
+            </a>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center" id="nav-auth-container">
+                    <!-- Injected dynamically by auth.js -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div id="loading-spinner" class="text-center py-5">
+            <div class="spinner-border text-info" style="width: 3rem; height: 3rem;"></div>
+            <p class="text-secondary mt-3">Loading safety report diagnostics...</p>
+        </div>
+
+        <div id="report-content" class="d-none">
+            <!-- Header Bar -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 no-print">
+                <div>
+                    <span class="badge bg-secondary mb-2"><i class="bi bi-fingerprint me-1"></i> Forensic Safety Audit</span>
+                    <h2 class="fw-bold text-white mb-0" id="report-job-title">Opportunity Title</h2>
+                    <p class="text-secondary small mb-0">Claimed Employer: <strong class="text-info" id="report-company">Company</strong> • Scanned on <span id="report-date">Date</span></p>
+                </div>
+                <div class="d-flex gap-2 mt-3 mt-md-0">
+                    <button class="btn btn-shield-outline" onclick="window.print()">
+                        <i class="bi bi-printer me-1"></i> Print / PDF
+                    </button>
+                    <button id="btn-vault" class="btn btn-warning text-dark fw-bold" onclick="openVaultModal()">
+                        <i class="bi bi-safe-fill me-1"></i> Save to Evidence Vault
+                    </button>
+                    <a href="/scan.html" class="btn btn-shield-primary">
+                        <i class="bi bi-plus-circle me-1"></i> Scan Another
+                    </a>
+                </div>
+            </div>
+
+            <!-- Top Score Overview Grid -->
+            <div class="row g-4 mb-4">
+                <!-- Radial Safety Gauge -->
+                <div class="col-lg-4">
+                    <div class="cs-card text-center h-100 d-flex flex-column justify-content-center p-4">
+                        <h6 class="text-secondary text-uppercase fw-bold mb-3">Overall Safety Score</h6>
+                        
+                        <div class="dial-container mb-3">
+                            <svg width="220" height="220">
+                                <circle class="dial-bg" cx="110" cy="110" r="90"></circle>
+                                <circle id="dial-circle" class="dial-progress" cx="110" cy="110" r="90" stroke-dasharray="565.48" stroke-dashoffset="565.48"></circle>
+                            </svg>
+                            <div class="dial-center-text">
+                                <div class="score-number" id="score-text">0</div>
+                                <div class="score-sub">out of 100</div>
+                            </div>
+                        </div>
+
+                        <div id="verdict-badge-container">
+                            <!-- Dynamic Badge -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary & Metadata Card -->
+                <div class="col-lg-8">
+                    <div class="cs-card h-100 p-4">
+                        <h5 class="text-white fw-bold mb-3 border-bottom border-secondary border-opacity-25 pb-2">
+                            <i class="bi bi-cpu-fill text-info me-2"></i> Executive Safety Verdict
+                        </h5>
+                        <p class="text-secondary mb-4 fs-6" id="summary-explanation">
+                            Loading summary explanation...
+                        </p>
+
+                        <div class="row g-3 p-3 bg-dark rounded border border-secondary border-opacity-25 mb-4">
+                            <div class="col-md-6">
+                                <div class="text-muted small">Recruiter Email:</div>
+                                <div class="text-white fw-semibold small" id="meta-email">None provided</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-muted small">Compensation:</div>
+                                <div class="text-white fw-semibold small" id="meta-salary">Not specified</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-muted small">Location:</div>
+                                <div class="text-white fw-semibold small" id="meta-location">Remote</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-muted small">AI NLP Confidence:</div>
+                                <div class="text-info fw-semibold small" id="meta-ai-confidence">85%</div>
+                            </div>
+                        </div>
+
+                        <div id="attachment-container" class="d-none">
+                            <a id="attachment-link" href="#" target="_blank" class="btn btn-sm btn-outline-info">
+                                <i class="bi bi-paperclip me-1"></i> View Attached Offer Letter / Screenshot
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detected Red Flags & Warning Signs Breakdown -->
+            <div class="cs-card mb-4 p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="text-white fw-bold mb-0">
+                        <i class="bi bi-exclamation-octagon-fill text-danger me-2"></i> Detected Warning Signs & Red Flags
+                    </h5>
+                    <span class="badge bg-secondary" id="factor-count-badge">0 Signs Detected</span>
+                </div>
+                
+                <div id="factors-container">
+                    <!-- Populated by report.js -->
+                </div>
+            </div>
+
+            <!-- Actionable Recommendations Box -->
+            <div class="cs-card p-4 border-warning border-opacity-25">
+                <h5 class="text-warning fw-bold mb-3">
+                    <i class="bi bi-shield-shaded me-2"></i> Recommended Safety Action Plan
+                </h5>
+                <div id="safety-recommendations-box" class="text-secondary small" style="white-space: pre-line; line-height: 1.8;">
+                    Loading safety recommendations...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Evidence Vault Modal -->
+    <div class="modal fade" id="vaultModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content cs-card border-warning border-opacity-50">
+                <div class="modal-header border-secondary border-opacity-25">
+                    <h5 class="modal-title text-white fw-bold"><i class="bi bi-safe-fill text-warning me-2"></i> Save to Evidence Vault</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary small">Store this incident with your notes to report to your college placement cell or cyber crime unit.</p>
+                    <div class="mb-3">
+                        <label class="form-label">Incident Title</label>
+                        <input type="text" id="vault-title" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Personal Notes / Suspicious Details</label>
+                        <textarea id="vault-notes" class="form-control" rows="4" placeholder="e.g. Demanded deposit of ₹2,500 on Telegram; refused to provide corporate offer letter..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary border-opacity-25">
+                    <button type="button" class="btn btn-shield-outline" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning text-dark fw-bold" onclick="saveToVault()">
+                        <i class="bi bi-check-circle-fill me-1"></i> Save Incident
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/report.js"></script>
+</body>
+</html>
